@@ -2,4 +2,7 @@
     <string name="app_name">AndroidScaffolding</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="headline">Hello blank fragment</string>
+    <string name="boardListTitle">보드리스트</string>
+    <string name="boardListEdit">Board List Edit</string>
 </resources>
