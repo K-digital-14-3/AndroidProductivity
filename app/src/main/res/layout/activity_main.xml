@@ -20,15 +20,15 @@
 
 
     <com.google.android.material.bottomnavigation.BottomNavigationView
-            android:id="@+id/main_bottom_nav"
-            android:background="#000000"
-            android:layout_alignParentBottom="true"
-            android:layout_width="match_parent"
-            android:layout_height="64dp"
-            app:labelVisibilityMode="unlabeled"
-            app:itemActiveIndicatorStyle="@drawable/menu_selector_color"
-            app:itemIconTint="#ffffff"
-            app:itemHorizontalTranslationEnabled="false"
-            app:menu="@menu/main_nav"
-    />
+        android:id="@+id/main_bottom_nav"
+        android:layout_width="match_parent"
+        android:layout_height="64dp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="0dp"
+        android:background="#000000"
+        app:itemActiveIndicatorStyle="@drawable/menu_selector_color"
+        app:itemHorizontalTranslationEnabled="false"
+        app:itemIconTint="#ffffff"
+        app:labelVisibilityMode="unlabeled"
+        app:menu="@menu/main_nav" />
 </RelativeLayout>

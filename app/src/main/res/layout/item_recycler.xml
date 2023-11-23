@@ -14,6 +14,15 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="알림"/>
+
+    <EditText
+        android:id="@+id/etNotification"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/textview1"
+        android:hint="업데이트 할 내용을 입력하세요" />
+
+
     <TextView
         android:id="@+id/textview2"
         android:paddingTop="10dp"
@@ -22,6 +31,14 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="지원"/>
+
+    <AutoCompleteTextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+    </AutoCompleteTextView>
+
+
     <TextView
         android:id="@+id/textview3"
         android:paddingTop="10dp"
@@ -30,6 +47,13 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="앱"/>
+<!--    <android.inputmethodservice.ExtractEditText-->
+<!--        android:layout_idth="wrap_content"-->
+<!--        android:layout_height="match_parent">-->
+
+
+
+
 
 </LinearLayout>
 
