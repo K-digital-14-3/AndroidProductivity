@@ -11,7 +11,7 @@
         tools:context=".ui.Main.BoardsFragment"
 >
 
-<com.google.android.material.appbar.AppBarLayout
+    <com.google.android.material.appbar.AppBarLayout
         android:id="@+id/topAppBarLayout"
         android:layout_width="match_parent"
         android:background="@color/white"
@@ -41,8 +41,8 @@
         />
 </com.google.android.material.appbar.MaterialToolbar>
 
-</com.google.android.material.appbar.AppBarLayout>
-        <RelativeLayout
+        </com.google.android.material.appbar.AppBarLayout>
+            <RelativeLayout
                 android:id="@+id/some_id"
                 android:layout_width="300dp"
                 android:layout_height="40dp"
@@ -50,16 +50,30 @@
                 android:layout_below="@id/topAppBarLayout"
                 android:layout_centerHorizontal="true"
                 android:layout_marginTop="16dp">
-                        <com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton
-                                android:id="@+id/filter_fab"
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:layout_gravity="bottom|end"
-                                android:contentDescription="extended_fab_content_desc"
-                                android:text="필터"
-                                app:backgroundTint="@color/white"
-                                app:icon="@drawable/filter_icon"/>
-        </RelativeLayout>
+                    <com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton
+                        android:id="@+id/filter_fab"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="bottom|end"
+                        android:contentDescription="extended_fab_content_desc"
+                        android:text="필터"
+                        app:backgroundTint="@color/white"
+                        app:icon="@drawable/filter_icon"/>
+            </RelativeLayout>
 
-
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/addListFAB"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentRight="true"
+            android:contentDescription="add board list"
+            app:backgroundTint="#166F6A"
+            app:tint="@color/white"
+            app:srcCompat="@drawable/add_icon"
+            android:layout_marginTop="16dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginBottom="16dp"/>
+    <!-- 틴트로 FAB 배경 색 수정하는 것임 -->
 </RelativeLayout>
