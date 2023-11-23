@@ -9,7 +9,6 @@ import com.example.androidscaffolding.R
 
 
 class LocalTodoFragment : Fragment() {
-    // TODO: Rename and change types of parameters
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
