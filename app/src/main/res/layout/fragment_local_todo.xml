@@ -19,6 +19,7 @@
         android:layout_marginTop="100dp"
         android:textSize="24sp"
         android:textStyle="bold"/>
+
     <androidx.coordinatorlayout.widget.CoordinatorLayout
         android:layout_width="300dp"
         android:layout_height="310dp"
@@ -26,23 +27,27 @@
         android:layout_marginTop="96dp"
         android:background="@drawable/layout_background"
         android:orientation="vertical">
-        <com.google.android.material.appbar.AppBarLayout
-            android:layout_width="match_parent"
-            android:layout_height="70dp">
-
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="할일 목록"
+            android:layout_marginTop="25dp"
+            android:layout_marginLeft="40dp"
+            android:textStyle="bold"/>
             <com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton
                 android:id="@+id/floatingActionButton"
                 android:layout_width="56dp"
                 android:layout_height="56dp"
                 app:icon="@drawable/baseline_create_24"
-                android:layout_gravity="end|bottom"/>
-        </com.google.android.material.appbar.AppBarLayout>
+                android:layout_gravity="end|top"
+                android:layout_marginRight="5dp"
+                android:layout_marginTop="5dp"/>
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/taskrecycler"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_marginTop="70dp"/>
-
+            android:layout_marginTop="70dp"
+            android:background="@drawable/layout_background"/>
     </androidx.coordinatorlayout.widget.CoordinatorLayout>
     <TextView
         android:layout_width="wrap_content"
