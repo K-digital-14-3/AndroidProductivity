@@ -7,9 +7,12 @@
              tools:context=".ui.Main.HomeFragment">
 
     <!-- TODO: Update blank fragment layout -->
+
     <TextView
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:text="home"/>
-
+            android:gravity="center"
+            android:text="홈"
+            android:textSize="32sp"
+    />
 </LinearLayout>
