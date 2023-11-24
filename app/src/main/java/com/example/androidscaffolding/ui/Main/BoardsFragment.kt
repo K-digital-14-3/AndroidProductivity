@@ -1,17 +1,16 @@
 package com.example.androidscaffolding.ui.Main
 
 import android.os.Bundle
-import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import com.example.androidscaffolding.R
+import androidx.fragment.app.Fragment
 import com.example.androidscaffolding.databinding.FragmentBoardsBinding
-import com.example.androidscaffolding.databinding.FragmentHomeBinding
 
 
 class BoardsFragment : Fragment() {
     private var mBinding : FragmentBoardsBinding? = null
+
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -25,6 +24,14 @@ class BoardsFragment : Fragment() {
         // Inflate the layout for this fragment
         val binding = FragmentBoardsBinding.inflate(inflater, container, false)
         mBinding = binding
+
+        val button = binding.addListFAB
+        button.setOnClickListener { view ->
+            val bottomSheet = BBSFragment()
+            bottomSheet.show(childFragmentManager, bottomSheet.tag)
+        }
+
+
         return  mBinding?.root
     }
 
