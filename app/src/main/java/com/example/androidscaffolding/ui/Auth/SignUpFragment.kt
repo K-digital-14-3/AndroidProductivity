@@ -8,7 +8,8 @@ import android.view.ViewGroup
 import com.example.androidscaffolding.R
 
 
-class SignInFragment : Fragment() {
+class SignUpFragment : Fragment() {
+
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,

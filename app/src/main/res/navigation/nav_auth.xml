@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_sign_in"
+    app:startDestination="@+id/introFragment">
+    <fragment
+        android:id="@+id/localtodoFragment"
+        android:name="com.example.androidscaffolding.ui.Auth.LocalTodoFragment"
+        android:label="fragment_local_todo"
+        tools:layout="@layout/fragment_local_todo" />
+    <fragment
+        android:id="@+id/loginFragment"
+        android:name="com.example.androidscaffolding.ui.Auth.LoginFragment"
+        android:label="fragment_login"
+        tools:layout="@layout/fragment_login" />
+    <fragment
+        android:id="@+id/signinFragment"
+        android:name="com.example.androidscaffolding.ui.Auth.SignInFragment"
+        android:label="fragment_sign_in"
+        tools:layout="@layout/fragment_sign_in" />
+
+</navigation>

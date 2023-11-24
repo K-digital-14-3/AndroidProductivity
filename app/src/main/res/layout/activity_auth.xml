@@ -10,11 +10,17 @@
     android:layout_gravity="center_vertical"
     tools:context=".ui.Auth.AuthActivity">
 
-    <TextView
+
+
+    <androidx.fragment.app.FragmentContainerView
+        android:id="@+id/auth_nav_host"
+        android:name="androidx.navigation.fragment.NavHostFragment"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:gravity="center"
-        android:text="어센티케이션"
-        android:textSize="32sp"
-        />
+        android:layout_weight="1"
+        app:defaultNavHost="true"
+        app:navGraph="@navigation/nav_auth"/>
+
+
+
 </LinearLayout>
