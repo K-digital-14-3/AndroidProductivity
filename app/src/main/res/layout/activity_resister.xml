@@ -15,7 +15,7 @@
             android:id="@+id/textView"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:text="사  오  인  생"
+            android:text="회"
             android:textAlignment="center"
             android:textColor="#000000"
             android:textSize="36sp"
