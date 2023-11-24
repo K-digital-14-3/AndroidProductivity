@@ -2,4 +2,5 @@
 <resources>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
+    <color name="M3_sys_lighton_surface_variant"> #49454F</color>
 </resources>
