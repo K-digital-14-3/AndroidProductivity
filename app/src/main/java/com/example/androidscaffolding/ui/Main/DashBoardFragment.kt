@@ -1,12 +1,10 @@
 package com.example.androidscaffolding.ui.Main
 
 import android.os.Bundle
-import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import com.example.androidscaffolding.R
-import com.example.androidscaffolding.databinding.FragmentBoardsBinding
+import androidx.fragment.app.Fragment
 import com.example.androidscaffolding.databinding.FragmentDashBoardBinding
 
 class DashBoardFragment : Fragment() {
