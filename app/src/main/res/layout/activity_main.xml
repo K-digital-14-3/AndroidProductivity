@@ -15,7 +15,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             app:navGraph="@navigation/nav_main"
-            android:layout_marginTop="53dp"/>
+            android:layout_marginTop="0dp"/>
     <com.google.android.material.bottomnavigation.BottomNavigationView
             android:id="@+id/main_bottom_nav"
             android:background="#000000"

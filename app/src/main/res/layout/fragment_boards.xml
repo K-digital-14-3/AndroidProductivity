@@ -5,7 +5,7 @@
         xmlns:app="http://schemas.android.com/apk/res-auto"
         android:id="@+id/boardsFragment"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="600dp"
         android:clipToOutline="true"
         android:background="#F8F8F8"
         tools:context=".ui.Main.BoardsFragment"
