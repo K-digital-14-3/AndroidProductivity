@@ -70,7 +70,7 @@
 
             <ImageView
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="150dp"
                 android:src="@drawable/ic_launcher_foreground"/>
 
             <EditText
@@ -125,7 +125,7 @@
             <View
                 android:layout_width="match_parent"
                 android:layout_height="1dp"
-                android:layout_marginTop="30dp" />
+                android:layout_marginTop="10dp" />
 
 
             <EditText
@@ -147,15 +147,24 @@
                 android:textColor="#56000000"
                 android:textSize="8sp" />
 
-
-            <ToggleButton
-                android:id="@+id/toggleButton2"
+            <Button
+                android:id="@+id/fragment_register"
+                android:backgroundTint="@color/M3_sys_lighton_surface_variant"
                 android:layout_width="match_parent"
-                android:layout_height="40dp"
-                android:textSize="10sp"
-                android:textOn="로그인"
-                android:textOff="로그인"
-                android:gravity="right" />
+                android:layout_height="45dp"
+                android:layout_marginTop="16dp"
+                android:gravity="right"
+                android:text="로그인" />
+
+
+<!--            <ToggleButton-->
+<!--                android:id="@+id/toggleButton2"-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="40dp"-->
+<!--                android:textSize="10sp"-->
+<!--                android:textOn="로그인"-->
+<!--                android:textOff="로그인"-->
+<!--                android:gravity="right" />-->
 
 
         </LinearLayout>

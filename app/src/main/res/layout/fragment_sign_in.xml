@@ -65,11 +65,10 @@
 <!--                android:textSize="15sp"/>-->
 
 
-
             <ImageView
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:src="@drawable/ic_launcher_foreground"/>
+                android:layout_height="150dp"
+                android:src="@drawable/ic_launcher_foreground" />
 
 
 
@@ -106,18 +105,6 @@
                 android:text="      * Forgot Password?   비밀번호를 잊으셨습니까?"
                 />
 
-
-
-            <com.google.android.material.chip.Chip
-                android:id="@+id/forgotpasswordchip"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="0dp"
-                android:inputType="textPassword"
-                android:textSize="10sp"
-                android:hint="    여기를 클릭하세요  Click" />
-
-
             <Button
                 android:id="@+id/loginBtn"
                 android:layout_width="match_parent"
@@ -127,13 +114,12 @@
 
 
             <com.google.android.material.chip.Chip
-                android:id="@+id/chip"
+                android:id="@+id/anotherchip"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="3dp"
-                android:textSize="10sp"
                 android:text="다른 방법으로 로그인"
-                />
+                android:textSize="10sp" />
 
             <View
                 android:layout_width="match_parent"
@@ -162,14 +148,23 @@
 
 
 
-            <ToggleButton
-                android:id="@+id/toggleButton2"
+            <Button
+                android:id="@+id/fragment_register"
+                android:backgroundTint="@color/M3_sys_lighton_surface_variant"
                 android:layout_width="match_parent"
-                android:layout_height="40dp"
-                android:textSize="10sp"
-                android:textOn="회원가입"
-                android:textOff="회원가입"
-                android:gravity="right" />
+                android:layout_height="45dp"
+                android:layout_marginTop="16dp"
+                android:gravity="right"
+                android:text="회원가입" />
+
+<!--            <ToggleButton-->
+<!--                android:id="@+id/toggleButton2"-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="40dp"-->
+<!--                android:textSize="10sp"-->
+<!--                android:textOn="회원가입"-->
+<!--                android:textOff="회원가입"-->
+<!--                android:gravity="right" />-->
 
 
             </LinearLayout>
