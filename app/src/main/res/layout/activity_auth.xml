@@ -9,8 +9,7 @@
     android:orientation="vertical"
     android:weightSum="1"
     android:layout_gravity="center_vertical"
-    tools:context="Auth.AuthActivity">
-
+    tools:context=".ui.Auth.AuthActivity">
 
 
     <!--    <androidx.fragment.app.FragmentContainerView-->
@@ -23,9 +22,12 @@
     <!--        app:navGraph="@navigation/nav_auth"/>-->
 
 
+
+
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent">
+
 
 
         <LinearLayout
@@ -66,61 +68,28 @@
                 android:padding="16dp"
                 tools:context=".MainActivity">
 
-
                 <ImageView
                     android:layout_width="match_parent"
-                    android:layout_height="300dp"
+                    android:layout_height="200dp"
                     android:src="@drawable/ic_launcher_foreground" />
 
-
-                <EditText
-                    android:id="@+id/EmailEt"
+                <RelativeLayout
+                    xmlns:android="http://schemas.android.com/apk/res/android"
+                    android:id="@+id/statelayer"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:hint="이메일 E-MAIL"
-                    android:textStyle="bold"
-                    android:inputType="textEmailAddress"
-                    android:textSize="15sp"/>
+                    android:layout_height="56dp"
+                    android:background="@drawable/statelayer">
 
-                <View
-                    android:layout_width="match_parent"
-                    android:layout_height="1dp"
-                    android:layout_marginTop="5dp" />
+                    <EditText
+                        android:id="@+id/EmailEt"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="  이메일  E-MAIL"
+                        android:textStyle="bold"
+                        android:inputType="textEmailAddress"
+                        android:textSize="15sp"/>
 
-                <EditText
-                    android:id="@+id/PasswordEt"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:hint="비밀번호 PASSWORD"
-                    android:textStyle="bold"
-                    android:inputType="textPassword"
-                    android:textSize="15sp"/>
-
-                <View
-                    android:layout_width="match_parent"
-                    android:layout_height="1dp"
-                    android:layout_marginTop="1dp" />
-
-
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="5dp"
-                    android:textColor="#56000000"
-                    android:textSize="8sp"
-                    android:textStyle="bold"
-                    android:text="      * Forgot Password?   비밀번호를 잊으셨습니까?"
-                    />
-
-
-                <com.google.android.material.chip.Chip
-                    android:id="@+id/chip"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="3dp"
-                    android:textSize="10sp"
-                    android:text="다른 방법으로 로그인 - 이 칩 아래 부분에 소셜 로그인 구현 예정"
-                    />
+                </RelativeLayout>
 
                 <View
                     android:layout_width="match_parent"
@@ -128,12 +97,59 @@
                     android:layout_marginTop="10dp" />
 
 
-                <!--                <Button-->
-                <!--                    android:id="@+id/fragment_login"-->
-                <!--                    android:layout_width="match_parent"-->
-                <!--                    android:layout_height="45dp"-->
-                <!--                    android:layout_marginTop="16dp"-->
-                <!--                    android:text="로그인" />-->
+                <RelativeLayout
+                    xmlns:android="http://schemas.android.com/apk/res/android"
+                    android:id="@+id/textfield"
+                    android:layout_width="match_parent"
+                    android:layout_height="48dp"
+                    android:background="@drawable/textfield">
+
+                    <EditText
+                        android:id="@+id/PasswordEt"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="  비밀번호  PASSWORD"
+                        android:textStyle="bold"
+                        android:inputType="textPassword"
+                        android:textSize="15sp"/>
+                </RelativeLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginTop="5dp" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="1dp"
+                    android:textColor="#56000000"
+                    android:textSize="8sp"
+                    android:textStyle="bold"
+                    android:text="      * Forgot Password?   비밀번호를 잊으셨습니까?"
+                    />
+
+                <com.google.android.material.chip.Chip
+                    android:id="@+id/chip"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="3dp"
+                    android:textSize="10sp"
+                    android:text="다른 방법으로 로그인"
+                    />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginTop="1dp" />
+
+                <ImageButton
+                    android:id="@+id/fragment_login"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:src="@drawable/ic_launcher_foreground"
+                    />
 
                 <Button
                     android:id="@+id/loginBtn"
@@ -141,6 +157,14 @@
                     android:layout_height="45dp"
                     android:layout_marginTop="16dp"
                     android:text="로그인" />
+
+<!--                <Button-->
+<!--                    android:id="@+id/logoutBtn"-->
+<!--                    android:layout_width="match_parent"-->
+<!--                    android:layout_height="45dp"-->
+<!--                    android:layout_marginTop="16dp"-->
+<!--                    android:text="로그아웃" />-->
+
 
                 <View
                     android:layout_width="match_parent"
@@ -154,6 +178,7 @@
                 <!--                    android:layout_height="45dp"-->
                 <!--                    android:layout_marginTop="16dp"-->
                 <!--                    android:text="회원가입" />-->
+
 
                 <Button
                     android:id="@+id/signupOKBtn"
@@ -180,11 +205,11 @@
 
             </LinearLayout>
 
+
         </LinearLayout>
 
 
     </androidx.constraintlayout.widget.ConstraintLayout>
-
 
 
 </LinearLayout>
