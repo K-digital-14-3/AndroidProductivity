@@ -12,12 +12,18 @@ class recycleradapter (val datas : MutableList<String>) :RecyclerView.Adapter<Re
        AuthtaskRecyclerBinding.inflate(LayoutInflater.from(parent.context),parent,false))
 
 
+
     override fun getItemCount(): Int {
         return datas.size
     }
 
     override fun onBindViewHolder(holder: RecyclerView.ViewHolder, position: Int) {
         val binding = (holder as TaskViewHolder).binding
-        binding.headline.text=datas[position]
+        binding.headlineView.text=datas[position]
+    }
+
+    fun addTask(task:String){
+        datas.add(task)
+        notifyItemInserted(datas.size-1)
     }
 }
