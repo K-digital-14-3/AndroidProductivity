@@ -8,17 +8,17 @@
     app:startDestination="@+id/introFragment">
     <fragment
         android:id="@+id/localtodoFragment"
-        android:name="com.example.androidscaffolding.ui.Auth.LocalTodoFragment"
+        android:name="com.example.androidscaffolding.ui.Auth.fragment.LocalTodoFragment"
         android:label="fragment_local_todo"
         tools:layout="@layout/fragment_local_todo" />
     <fragment
         android:id="@+id/loginFragment"
-        android:name="com.example.androidscaffolding.ui.Auth.LoginFragment"
+        android:name="com.example.androidscaffolding.ui.Auth.fragment.LoginFragment"
         android:label="fragment_login"
         tools:layout="@layout/fragment_login" />
     <fragment
         android:id="@+id/signinFragment"
-        android:name="com.example.androidscaffolding.ui.Auth.SignInFragment"
+        android:name="com.example.androidscaffolding.ui.Auth.fragment.SignInFragment"
         android:label="fragment_sign_in"
         tools:layout="@layout/fragment_sign_in" />
 

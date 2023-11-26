@@ -67,6 +67,7 @@
                 android:layout_marginTop="5dp" />
 
             <EditText
+                android:id="@+id/signupPasswordEt"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:hint="비밀번호 PASSWORD"
@@ -127,23 +128,23 @@
                 android:text="회원가입" />
 
 
-<!--            <TextView-->
-<!--                android:id="@+id/resisterBtn"-->
-<!--                android:layout_width="300dp"-->
-<!--                android:layout_height="18dp"-->
-<!--                android:layout_alignParentLeft="true"-->
-<!--                android:layout_marginLeft="26dp"-->
-<!--                android:layout_alignParentTop="true"-->
-<!--                android:layout_marginTop="665dp"-->
-<!--                android:text="회원가입"-->
-<!--                android:="@style/resisterBtn"-->
-<!--                android:gravity="center_horizontal|top" />-->
+            <!--            <TextView-->
+            <!--                android:id="@+id/resisterBtn"-->
+            <!--                android:layout_width="300dp"-->
+            <!--                android:layout_height="18dp"-->
+            <!--                android:layout_alignParentLeft="true"-->
+            <!--                android:layout_marginLeft="26dp"-->
+            <!--                android:layout_alignParentTop="true"-->
+            <!--                android:layout_marginTop="665dp"-->
+            <!--                android:text="회원가입"-->
+            <!--                android:="@style/resisterBtn"-->
+            <!--                android:gravity="center_horizontal|top" />-->
 
 
 
-                    </LinearLayout>
+        </LinearLayout>
 
-                </LinearLayout>
+    </LinearLayout>
 
 
-            </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

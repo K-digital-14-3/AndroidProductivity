@@ -6,7 +6,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ui.Main.MainActivity">
+    tools:context=".Auth.AuthActivity">
 
 
     <LinearLayout
@@ -56,13 +56,13 @@
                 android:textSize="18sp" />
 
 
-<!--            <EditText-->
-<!--                android:layout_width="match_parent"-->
-<!--                android:layout_height="wrap_content"-->
-<!--                android:hint="   E-MAIL 이메일"-->
-<!--                android:textStyle="bold"-->
-<!--                android:inputType="textEmailAddress"-->
-<!--                android:textSize="15sp"/>-->
+            <!--            <EditText-->
+            <!--                android:layout_width="match_parent"-->
+            <!--                android:layout_height="wrap_content"-->
+            <!--                android:hint="   E-MAIL 이메일"-->
+            <!--                android:textStyle="bold"-->
+            <!--                android:inputType="textEmailAddress"-->
+            <!--                android:textSize="15sp"/>-->
 
 
             <ImageView
@@ -157,20 +157,20 @@
                 android:gravity="right"
                 android:text="회원가입" />
 
-<!--            <ToggleButton-->
-<!--                android:id="@+id/toggleButton2"-->
-<!--                android:layout_width="match_parent"-->
-<!--                android:layout_height="40dp"-->
-<!--                android:textSize="10sp"-->
-<!--                android:textOn="회원가입"-->
-<!--                android:textOff="회원가입"-->
-<!--                android:gravity="right" />-->
+            <!--            <ToggleButton-->
+            <!--                android:id="@+id/toggleButton2"-->
+            <!--                android:layout_width="match_parent"-->
+            <!--                android:layout_height="40dp"-->
+            <!--                android:textSize="10sp"-->
+            <!--                android:textOn="회원가입"-->
+            <!--                android:textOff="회원가입"-->
+            <!--                android:gravity="right" />-->
 
-
-            </LinearLayout>
 
         </LinearLayout>
 
     </LinearLayout>
+
+</LinearLayout>
 
 
