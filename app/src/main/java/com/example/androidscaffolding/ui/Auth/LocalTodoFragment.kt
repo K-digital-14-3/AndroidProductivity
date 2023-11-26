@@ -1,6 +1,7 @@
 package com.example.androidscaffolding.ui.Auth
 
 import android.os.Bundle
+import android.util.Log
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
@@ -51,11 +52,13 @@ class LocalTodoFragment : Fragment(), BottomSheetListener {
         adapter = recycleradapter(taskList)
         binding.taskrecycler.adapter = adapter
         binding.taskrecycler.layoutManager = LinearLayoutManager(context)
+        Log.d("LocalTodoFragment", "RecyclerView setup with ${taskList.size} tasks")
     }
 
     override fun onTaskAdded(task: String) {
         todoDatabaseHelper.addTask(task)
         adapter.addTask(task)
+        Log.d("LocalTodoFragment", "Task added to UI: $task")
     }
 
 

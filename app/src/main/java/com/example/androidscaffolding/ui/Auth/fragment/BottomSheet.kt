@@ -2,6 +2,7 @@ package com.example.androidscaffolding.ui.Auth.fragment
 
 import android.content.Context
 import android.os.Bundle
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -25,6 +26,7 @@ class BottomSheet : BottomSheetDialogFragment() {
             val headline = binding.headline.text.toString()
             if (headline.isNotEmpty()) {
                 listener?.onTaskAdded(headline)
+                Log.d("BottomSheet", "Task sent to listener: $headline")
                 dismiss()
             }
         }
