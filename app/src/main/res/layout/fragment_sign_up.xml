@@ -1,12 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 
-<LinearLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Auth.AuthActivity">
+    tools:context="Auth.SignInFragment">
 
 
     <LinearLayout
@@ -31,7 +29,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:maxEms="15"
-                android:text="SIGN IN"
+                android:text="SIGN UP"
                 android:textColor="@color/white"
                 android:textSize="21sp" />
 
@@ -65,14 +63,22 @@
             <!--                android:textSize="15sp"/>-->
 
 
+
             <ImageView
                 android:layout_width="match_parent"
                 android:layout_height="150dp"
-                android:src="@drawable/ic_launcher_foreground" />
-
-
+                android:src="@drawable/ic_launcher_foreground"/>
 
             <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint=" 이름  NAME"
+                android:textStyle="bold"
+                android:inputType="textPassword"
+                android:textSize="14sp"/>
+
+            <EditText
+                android:id="@+id/signupID"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:hint=" 이메일  E-MAIL"
@@ -88,6 +94,15 @@
                 android:inputType="textPassword"
                 android:textSize="14sp"/>
 
+            <EditText
+                android:id="@+id/signupPassword"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint=" 비밀번호 확인  PASSWORD"
+                android:textStyle="bold"
+                android:inputType="textPassword"
+                android:textSize="14sp"/>
+
 
             <View
                 android:layout_width="match_parent"
@@ -95,43 +110,23 @@
                 android:layout_marginTop="1dp" />
 
 
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="5dp"
-                android:textColor="#56000000"
-                android:textSize="8sp"
-                android:textStyle="bold"
-                android:text="      * Forgot Password?   비밀번호를 잊으셨습니까?"
-                />
+
 
             <Button
                 android:id="@+id/loginBtn"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="35dp"
-                android:text="로그인" />
-
-
-
-            <com.google.android.material.chip.Chip
-                android:id="@+id/anotherchip"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="3dp"
-                android:text="다른 방법으로 로그인"
-                android:textSize="10sp" />
-
+                android:text="회원가입" />
 
 
             <View
                 android:layout_width="match_parent"
                 android:layout_height="1dp"
-                android:layout_marginTop="30dp" />
+                android:layout_marginTop="10dp" />
 
 
             <EditText
-                android:id="@+id/fragment_login"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10sp"
@@ -145,29 +140,28 @@
                 android:layout_height="wrap_content"
                 android:paddingTop="50sp"
                 android:gravity="right"
-                android:text="* Are you new here?   프로젝트 이름'가 처음이신가요?"
+                android:text="* Do you already have an ID?   이미 계정이 있으신가요?"
                 android:textStyle="bold"
                 android:textColor="#56000000"
                 android:textSize="8sp" />
-
-
 
             <Button
                 android:id="@+id/fragment_register"
                 android:backgroundTint="@color/M3_sys_lighton_surface_variant"
                 android:layout_width="match_parent"
                 android:layout_height="45dp"
-                android:layout_marginTop="10dp"
+                android:layout_marginTop="16dp"
                 android:gravity="right"
-                android:text="회원가입" />
+                android:text="로그인" />
+
 
             <!--            <ToggleButton-->
             <!--                android:id="@+id/toggleButton2"-->
             <!--                android:layout_width="match_parent"-->
             <!--                android:layout_height="40dp"-->
             <!--                android:textSize="10sp"-->
-            <!--                android:textOn="회원가입"-->
-            <!--                android:textOff="회원가입"-->
+            <!--                android:textOn="로그인"-->
+            <!--                android:textOff="로그인"-->
             <!--                android:gravity="right" />-->
 
 
@@ -175,6 +169,7 @@
 
     </LinearLayout>
 
-</LinearLayout>
 
+
+</FrameLayout>
 

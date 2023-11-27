@@ -3,12 +3,22 @@
              xmlns:tools="http://schemas.android.com/tools"
              android:layout_width="match_parent"
              android:layout_height="match_parent"
-             tools:context=".ui.Auth.OpeningDialogFragment">
+             tools:context=".ui.Auth.fragment.OpeningDialogFragment">
 
-    <!-- TODO: Update blank fragment layout -->
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/supabase_logo_icon"
+        android:layout_gravity="center"
+        android:layout_marginBottom="100dp"/>
+
     <TextView
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:text="@string/hello_blank_fragment"/>
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="SUPANOTE"
+        android:textSize="28sp"
+        android:textStyle="bold"
+        android:layout_gravity="center"
+        android:layout_marginTop="100dp"/>
 
 </FrameLayout>

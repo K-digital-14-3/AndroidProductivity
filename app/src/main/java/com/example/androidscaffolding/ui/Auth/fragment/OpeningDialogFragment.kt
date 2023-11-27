@@ -1,4 +1,4 @@
-package com.example.androidscaffolding.ui.Auth
+package com.example.androidscaffolding.ui.Auth.fragment
 
 import android.app.AlertDialog
 import android.app.Dialog
