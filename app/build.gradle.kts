@@ -34,6 +34,7 @@ android {
         dataBinding = true
     }
 
+    // Java 8 사용을 위한 build.gradle 설정
     compileOptions {
         sourceCompatibility = JavaVersion.VERSION_1_8
         targetCompatibility = JavaVersion.VERSION_1_8
@@ -42,6 +43,8 @@ android {
         jvmTarget = "1.8"
     }
 }
+
+
 
 dependencies {
     val nav_version = "2.5.3"

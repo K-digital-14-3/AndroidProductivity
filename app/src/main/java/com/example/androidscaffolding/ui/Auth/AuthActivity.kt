@@ -1,11 +1,9 @@
 package com.example.androidscaffolding.ui.Auth
 
 import android.content.Intent
-import android.graphics.drawable.GradientDrawable
 import android.os.Bundle
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
-import com.example.androidscaffolding.R
 import com.example.androidscaffolding.databinding.ActivityAuthBinding
 import com.example.androidscaffolding.ui.Auth.fragment.OpeningDialogFragment
 import com.google.firebase.auth.FirebaseAuth
@@ -41,11 +39,76 @@ class AuthActivity : AppCompatActivity() {
         }
 
 
-        // 조건에 따른 색 변환
-        binding.statelayer.setBackgroundColor(resources.getColor(R.color.M3_sys_lighton_surface_variant))
+        // 회원가입해서 로그인하면 main으로 넘어가는 로직
+        binding.loginBtn.setOnClickListener {
+            createAccount(binding.EmailEt.text.toString(), binding.PasswordEt.text.toString())
+        }
 
-        val bgShape = binding.statelayer.background as GradientDrawable
-        bgShape.setColor(resources.getColor(R.color.black))
+
+
+
+        /*
+                /* 로그인 페이지에서 비밀번호 6자 미만으로 입력 시, 빨간색 상자 생성 */
+                binding.PasswordEt.addTextChangedListener(object: TextWatcher {
+
+                    override fun afterTextChanged(s: Editable?) {
+
+                    }
+                    override fun beforeTextChanged(s: CharSequence?, start: Int, count: Int, after: Int) {
+
+                    }
+                    override fun onTextChanged(s: CharSequence?, start: Int, before: Int, count: Int) {
+                        // userinput 에 비밀번호 받기
+                        var userinput = binding.PasswordEt.text.toString()
+
+
+                        if ( userinput.length < 6 ) {
+
+                            // 조건에 따른 색 변환
+                            binding.statelayer.setBackgroundResource(R.drawable.textfield)
+
+                            val bgShape = binding.statelayer.background as GradientDrawable
+                            bgShape.setColor(resources.getColor(R.color.black))
+                        }
+                        else {
+                            binding.statelayer.setBackgroundColor(resources.getColor(R.color.M3_sys_lighton_surface_variant))
+
+                            val bgShape = binding.statelayer.background as GradientDrawable
+                            bgShape.setColor(resources.getColor(R.color.black))
+                        }
+
+
+                /* 회원가입 페이지에서 형식(@)에 맞지 않는 이메일 입력 시, 빨간색 상자 생성 */
+
+                        // userinput2 에 이메일 받기
+                        var userinput2 = binding.EmailEt.text.toString()
+
+                        if ( '@' in userinput2 ) {
+
+                            // 조건에 따른 색 변환
+                            binding.statelayer.setBackgroundResource(R.drawable.textfield)
+
+                            val bgShape = binding.statelayer.background as GradientDrawable
+                            bgShape.setColor(resources.getColor(R.color.black))
+                        }
+                        else {
+                            binding.statelayer.setBackgroundColor(resources.getColor(R.color.M3_sys_lighton_surface_variant))
+
+                            val bgShape = binding.statelayer.background as GradientDrawable
+                            bgShape.setColor(resources.getColor(R.color.black))
+                        }
+
+                    }
+                  }
+                )
+
+
+        */
+
+
+
+
+
 
 
 
@@ -142,10 +205,18 @@ class AuthActivity : AppCompatActivity() {
 
     // 유저 정보 넘겨준 뒤, 메인 액티비티 호출
         fun moveMainPage(user: FirebaseUser?){
+
+
             if(user!= null){
                 startActivity(Intent(this,AuthActivity::class.java))
                 finish()
+
+
             }
+
+
     }
+
+
 }
 
