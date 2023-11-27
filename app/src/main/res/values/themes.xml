@@ -3,7 +3,13 @@
     <style name="Base.Theme.AndroidScaffolding" parent="Theme.Material3.DayNight.NoActionBar">
         <!-- Customize your light theme here. -->
         <!-- <item name="colorPrimary">@color/my_light_primary</item> -->
+
+
+        <!--    클릭 이벤트-->
+        <item name="android:colorControlHighlight"> @color/purple_200</item>
     </style>
 
     <style name="Theme.AndroidScaffolding" parent="Base.Theme.AndroidScaffolding"/>
+
+
 </resources>
