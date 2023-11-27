@@ -1,16 +1,12 @@
-package com.example.androidscaffolding.ui.Auth
+package com.example.androidscaffolding.ui.Auth.fragment
 
 import android.os.Bundle
-import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import androidx.fragment.app.FragmentManager
-import androidx.recyclerview.widget.LinearLayoutManager
-import com.example.androidscaffolding.R
+import androidx.fragment.app.Fragment
 import com.example.androidscaffolding.databinding.FragmentLocalTodoBinding
 import com.example.androidscaffolding.ui.Auth.adapter.recycleradapter
-import com.example.androidscaffolding.ui.Auth.fragment.BottomSheet
 
 
 class LocalTodoFragment : Fragment() {

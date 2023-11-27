@@ -8,6 +8,25 @@
 >
 
 
+
+
+<!--    <Button-->
+<!--        android:id="@+id/loginBtn"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_marginTop="600dp"-->
+<!--        android:text="로그인" />-->
+
+<!--    <Button-->
+<!--        android:id="@+id/logoutBtn"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_marginTop="600dp"-->
+<!--        android:text="로그아웃" />-->
+
+
+
+
     <androidx.fragment.app.FragmentContainerView
             android:id="@+id/main_nav_host"
             android:layout_alignParentTop="true"
@@ -16,6 +35,7 @@
             android:layout_height="wrap_content"
             app:navGraph="@navigation/nav_main"
             android:layout_marginTop="0dp"/>
+
     <com.google.android.material.bottomnavigation.BottomNavigationView
             android:id="@+id/main_bottom_nav"
             android:background="#000000"
@@ -28,4 +48,6 @@
             app:itemHorizontalTranslationEnabled="false"
             app:menu="@menu/main_nav"
     />
+
+
 </RelativeLayout>
