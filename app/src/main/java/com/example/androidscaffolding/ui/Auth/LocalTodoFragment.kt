@@ -16,15 +16,13 @@ import com.example.androidscaffolding.ui.Auth.fragment.BottomSheetListener
 
 class LocalTodoFragment : Fragment(), BottomSheetListener {
     lateinit var binding: FragmentLocalTodoBinding
-    lateinit var adapter:recycleradapter
     lateinit var todoDatabaseHelper: TodoDatabaseHelper
-    val dataList= mutableListOf<String>()
+    lateinit var adapter: recycleradapter
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         OpeningDialogFragment().show(childFragmentManager, "GAME_DIALOG")
-        todoDatabaseHelper = TodoDatabaseHelper(requireContext())
     }
 
     override fun onCreateView(
@@ -32,34 +30,25 @@ class LocalTodoFragment : Fragment(), BottomSheetListener {
         savedInstanceState: Bundle?
     ): View? {
         binding = FragmentLocalTodoBinding.inflate(layoutInflater, container, false)
-        setupRecyclerView()
+
+
+        // RecyclerView 및 Adapter 초기화
+        val db = TodoDatabaseHelper(requireContext())
+        val tasks = db.allData  // 데이터베이스에서 데이터를 가져옵니다
+        val adapter = recycleradapter(tasks)  // tasks는 List<String>이라고 가정
+        binding.taskrecycler.layoutManager = LinearLayoutManager(context)
+        binding.taskrecycler.adapter = adapter
+
 
         binding.newTaskBtn.setOnClickListener {
             BottomSheet().show(childFragmentManager,BottomSheet().tag)
+
         }
-
-        adapter = recycleradapter(dataList)
-
-        binding.taskrecycler.adapter=adapter
-        binding.taskrecycler.layoutManager = LinearLayoutManager(context)
-
         return binding.root
-
     }
 
-    private fun setupRecyclerView() {
-        val taskList = todoDatabaseHelper.getAllTasks()
-        adapter = recycleradapter(taskList)
-        binding.taskrecycler.adapter = adapter
-        binding.taskrecycler.layoutManager = LinearLayoutManager(context)
-        Log.d("LocalTodoFragment", "RecyclerView setup with ${taskList.size} tasks")
-    }
+    override fun onTaskAdded() {
 
-    override fun onTaskAdded(task: String) {
-        todoDatabaseHelper.addTask(task)
-        adapter.addTask(task)
-        Log.d("LocalTodoFragment", "Task added to UI: $task")
     }
-
 
 }

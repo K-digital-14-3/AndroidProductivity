@@ -7,9 +7,9 @@ import com.example.androidscaffolding.databinding.AuthtaskRecyclerBinding
 
 class TaskViewHolder(val binding : AuthtaskRecyclerBinding) : RecyclerView.ViewHolder(binding.root)
 //LocalTodoFragmanet에 taskrecycler어뎁터
-class recycleradapter (val datas : MutableList<String>) :RecyclerView.Adapter<RecyclerView.ViewHolder>() {
+class recycleradapter(val datas: List<String>) :RecyclerView.Adapter<RecyclerView.ViewHolder>() {
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): RecyclerView.ViewHolder =TaskViewHolder(
-       AuthtaskRecyclerBinding.inflate(LayoutInflater.from(parent.context),parent,false))
+        AuthtaskRecyclerBinding.inflate(LayoutInflater.from(parent.context),parent,false))
 
 
 
@@ -20,10 +20,8 @@ class recycleradapter (val datas : MutableList<String>) :RecyclerView.Adapter<Re
     override fun onBindViewHolder(holder: RecyclerView.ViewHolder, position: Int) {
         val binding = (holder as TaskViewHolder).binding
         binding.headlineView.text=datas[position]
+        binding.taskdescView.text=datas[position]
+
     }
 
-    fun addTask(task:String){
-        datas.add(task)
-        notifyItemInserted(datas.size-1)
-    }
 }

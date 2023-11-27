@@ -11,7 +11,7 @@ import com.example.androidscaffolding.ui.Auth.adapter.TodoDatabaseHelper
 import com.google.android.material.bottomsheet.BottomSheetDialogFragment
 
 class BottomSheet : BottomSheetDialogFragment() {
-    lateinit var binding : FragmentBottomSheetBinding
+    lateinit var binding: FragmentBottomSheetBinding
     var listener : BottomSheetListener? =null
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -19,26 +19,21 @@ class BottomSheet : BottomSheetDialogFragment() {
 
     }
 
-    override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?,savedInstanceState: Bundle?): View? {
-        binding = FragmentBottomSheetBinding.inflate(inflater,container,false)
+    override fun onCreateView(
+        inflater: LayoutInflater,
+        container: ViewGroup?,
+        savedInstanceState: Bundle?
+    ): View? {
+        binding = FragmentBottomSheetBinding.inflate(inflater, container, false)
 
         binding.saveButton.setOnClickListener {
-            val headline = binding.headline.text.toString()
-            if (headline.isNotEmpty()) {
-                listener?.onTaskAdded(headline)
-                Log.d("BottomSheet", "Task sent to listener: $headline")
-                dismiss()
-            }
-        }
+            val task = binding.headline.text.toString()  // 실제 입력 필드에 맞게 조정
+            val taskDesc = binding.desc.text.toString()  // 이 부분도 조정
 
+            val db = TodoDatabaseHelper(requireContext())
+            db.addData(task, taskDesc)
+            dismiss()
+        }
         return binding.root
-    }
-
-    override fun onAttach(context: Context) {
-        super.onAttach(context)
-        if (context is BottomSheetListener) {
-            listener = context
-        }
-
     }
 }
