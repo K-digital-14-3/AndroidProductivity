@@ -22,7 +22,7 @@
          android:entries=""
          app:entryValues=""
          app:key="Test"
-         app:title="글자크기">
+         app:title="글자크기1">
 
  </PreferenceCategory>
 
