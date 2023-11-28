@@ -50,6 +50,7 @@
             android:background="@drawable/layout_background"/>
     </androidx.coordinatorlayout.widget.CoordinatorLayout>
     <TextView
+        android:id="@+id/goLogin"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center"

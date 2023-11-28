@@ -23,6 +23,7 @@
         android:layout_marginTop="100dp"/>
 
     <TextView
+        android:id="@+id/todoStart"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="시작하고 생산성 향상하기"
