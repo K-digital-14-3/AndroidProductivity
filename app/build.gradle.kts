@@ -6,6 +6,24 @@ plugins {
     id("com.google.gms.google-services")
 }
 
+repositories {
+    google()
+    mavenCentral()
+    gradlePluginPortal()
+
+    allprojects {
+        repositories {
+            google()
+            jcenter()
+        }
+    }
+
+    //  kakao sdk 등을 내려받을 경로 지정
+    maven { ("https://devrepo.kakao.com/nexus/content/groups/public/") }
+}
+
+
+
 android {
     namespace = "com.example.androidscaffolding"
     compileSdk = 34
@@ -81,9 +99,13 @@ dependencies {
     // https://firebase.google.com/docs/android/setup#available-libraries
 
 
-    // 네이버 로그인
+    // Naver Login
     implementation ("com.navercorp.nid:oauth-jdk8:5.1.0") // jdk 8
     implementation ("org.jetbrains.kotlinx:kotlinx-coroutines-android:1.3.9")
+
+
+    // Kakao Login
+    implementation ("com.kakao.sdk:v2-user:2.12.1")
 
 
     implementation("androidx.activity:activity-ktx:$activity_version")
