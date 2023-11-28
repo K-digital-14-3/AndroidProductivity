@@ -14,7 +14,6 @@
             android:title="보드목록"
             android:icon="@drawable/clipboard_task_list_ltr"
             android:iconTint="#ffffff"
-
     />
 
     <item
@@ -22,7 +21,6 @@
             android:title="대시보드"
             android:icon="@drawable/histogram_icon"
             android:iconTint="#ffffff"
-
     />
 
     <item
