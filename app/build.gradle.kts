@@ -81,6 +81,11 @@ dependencies {
     // https://firebase.google.com/docs/android/setup#available-libraries
 
 
+    // 네이버 로그인
+    implementation ("com.navercorp.nid:oauth-jdk8:5.1.0") // jdk 8
+    implementation ("org.jetbrains.kotlinx:kotlinx-coroutines-android:1.3.9")
+
+
     implementation("androidx.activity:activity-ktx:$activity_version")
     implementation("androidx.core:core-ktx:1.9.0")
     implementation("androidx.appcompat:appcompat:1.6.1")

@@ -6,4 +6,9 @@
     <string name="boardListTitle">보드리스트</string>
     <string name="boardListEdit">Board List Edit</string>
     <string name="title_activity_bottom_sheet_ex">BottomSheetEx</string>
+
+    <string name="social_login_info_naver_client_id">ZXF6zGgbhAiZMsZMeuna</string>
+    <string name="social_login_info_naver_client_secret">lmnvJztn0V</string>
+    <string name="social_login_info_naver_client_name">sophie22e</string>
+
 </resources>
