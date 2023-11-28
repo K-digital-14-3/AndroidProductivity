@@ -7,6 +7,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.LinearLayoutManager
+import com.example.androidscaffolding.R
 import com.example.androidscaffolding.databinding.FragmentLocalTodoBinding
 import com.example.androidscaffolding.ui.Auth.adapter.TodoDatabaseHelper
 import com.example.androidscaffolding.ui.Auth.adapter.recycleradapter
@@ -31,6 +32,14 @@ class LocalTodoFragment : Fragment(), BottomSheetListener {
     ): View? {
         binding = FragmentLocalTodoBinding.inflate(layoutInflater, container, false)
 
+        //로그인 화면으로 이동
+        binding.goLogin.setOnClickListener {
+            // LocalTodoFragment 로 프래그먼트 트랜잭션 수행
+            fragmentManager?.beginTransaction()
+                ?.replace(R.id.fragment_container, LoginFragment())
+                ?.addToBackStack(null)
+                ?.commit()
+        }
 
         // RecyclerView 및 Adapter 초기화
         val db = TodoDatabaseHelper(requireContext())
@@ -39,7 +48,7 @@ class LocalTodoFragment : Fragment(), BottomSheetListener {
         binding.taskrecycler.layoutManager = LinearLayoutManager(context)
         binding.taskrecycler.adapter = adapter
 
-
+        //할일 입력하는 바텀시트
         binding.newTaskBtn.setOnClickListener {
             BottomSheet().show(childFragmentManager,BottomSheet().tag)
 
