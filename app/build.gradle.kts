@@ -6,21 +6,35 @@ plugins {
     id("com.google.gms.google-services")
 }
 
-repositories {
+
+dependencyResolutionManagement {
+    repositoriesMode.set(RepositoriesMode.FAIL_ON_PROJECT_REPOS)
+    repositories {
+        google()
+        mavenCentral()
+        //  kakao sdk 등을 내려받을 경로 지정
+        maven {url 'https://devrepo.kakao.com/nexus/content/groups/public/' }
+    }
+}
+
+buildscript {
+    repositories {
     google()
     mavenCentral()
     gradlePluginPortal()
+  }
 
     allprojects {
         repositories {
             google()
             jcenter()
+            mavenCentral()
         }
     }
 
     //  kakao sdk 등을 내려받을 경로 지정
-    maven { ("https://devrepo.kakao.com/nexus/content/groups/public/") }
-}
+    // maven { ("https://devrepo.kakao.com/nexus/content/groups/public/") }
+  }
 
 
 
@@ -65,6 +79,7 @@ android {
 
 
 dependencies {
+    implementation("com.android.support:recyclerview-v7:28.0.0")
     val nav_version = "2.5.3"
     val lifecycle_version = "2.6.2"
     val activity_version = "1.6.1"
@@ -119,3 +134,4 @@ dependencies {
     androidTestImplementation("androidx.test.ext:junit:1.1.5")
     androidTestImplementation("androidx.test.espresso:espresso-core:3.5.1")
 }
+
