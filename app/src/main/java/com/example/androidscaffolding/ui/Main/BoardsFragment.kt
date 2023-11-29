@@ -25,6 +25,7 @@ class BoardsFragment : Fragment() {
         val binding = FragmentBoardsBinding.inflate(inflater, container, false)
         mBinding = binding
 
+
         val button = binding.addListFAB
         button.setOnClickListener { view ->
             val bottomSheet = BBSFragment()
