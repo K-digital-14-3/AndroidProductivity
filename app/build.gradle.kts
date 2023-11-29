@@ -6,6 +6,38 @@ plugins {
     id("com.google.gms.google-services")
 }
 
+
+dependencyResolutionManagement {
+    repositoriesMode.set(RepositoriesMode.FAIL_ON_PROJECT_REPOS)
+    repositories {
+        google()
+        mavenCentral()
+        //  kakao sdk 등을 내려받을 경로 지정
+        maven {url 'https://devrepo.kakao.com/nexus/content/groups/public/' }
+    }
+}
+
+buildscript {
+    repositories {
+    google()
+    mavenCentral()
+    gradlePluginPortal()
+  }
+
+    allprojects {
+        repositories {
+            google()
+            jcenter()
+            mavenCentral()
+        }
+    }
+
+    //  kakao sdk 등을 내려받을 경로 지정
+    // maven { ("https://devrepo.kakao.com/nexus/content/groups/public/") }
+  }
+
+
+
 android {
     namespace = "com.example.androidscaffolding"
     compileSdk = 34
@@ -34,6 +66,7 @@ android {
         dataBinding = true
     }
 
+    // Java 8 사용을 위한 build.gradle 설정
     compileOptions {
         sourceCompatibility = JavaVersion.VERSION_1_8
         targetCompatibility = JavaVersion.VERSION_1_8
@@ -43,7 +76,10 @@ android {
     }
 }
 
+
+
 dependencies {
+    implementation("com.android.support:recyclerview-v7:28.0.0")
     val nav_version = "2.5.3"
     val lifecycle_version = "2.6.2"
     val activity_version = "1.6.1"
@@ -78,6 +114,15 @@ dependencies {
     // https://firebase.google.com/docs/android/setup#available-libraries
 
 
+    // Naver Login
+    implementation ("com.navercorp.nid:oauth-jdk8:5.1.0") // jdk 8
+    implementation ("org.jetbrains.kotlinx:kotlinx-coroutines-android:1.3.9")
+
+
+    // Kakao Login
+    implementation ("com.kakao.sdk:v2-user:2.12.1")
+
+
     implementation("androidx.activity:activity-ktx:$activity_version")
     implementation("androidx.core:core-ktx:1.9.0")
     implementation("androidx.appcompat:appcompat:1.6.1")
@@ -89,3 +134,4 @@ dependencies {
     androidTestImplementation("androidx.test.ext:junit:1.1.5")
     androidTestImplementation("androidx.test.espresso:espresso-core:3.5.1")
 }
+
